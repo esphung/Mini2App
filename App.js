@@ -3,15 +3,20 @@ import {View, Text, Button, NativeModules} from 'react-native';
 
 const { SwiftComponentManager } = NativeModules
 
-const App = () => {
+const App = (props) => {
+	// props from Xcode
+	console.log('props: ', props);
 	const pressMe = () => {
 		SwiftComponentManager.passValueFromReact('Hello World')
 	}
 
 	const registerApp = () => {
-		SwiftComponentManager.registerApp().then((response) => {
-			console.log('response: ', response);
+		SwiftComponentManager.registerApp('Hello', (test) => {
+			console.log('test: ', test);
 		})
+		// .then((response) => {
+		// 	console.log('response: ', response);
+		// })
 	}
 	return (
 		<View

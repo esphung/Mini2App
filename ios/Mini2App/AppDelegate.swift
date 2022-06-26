@@ -38,6 +38,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
   
+    // TODO: Passed props to react native
+    let imageList = [
+      "https://upload.wikimedia.org/wikipedia/en/9/95/Test_image.jpg",
+      "https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="
+    ]
+
+    let props = [
+        "images": imageList
+    ]
+
     let jsCodeLocation: URL
     jsCodeLocation = RCTBundleURLProvider.sharedSettings().jsBundleURL(
       forBundleRoot: "index",
@@ -47,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let rootView = RCTRootView(
       bundleURL: jsCodeLocation,
       moduleName: "Mini2App",
-      initialProperties: nil,
+      initialProperties: props, // passing props to react native app
       launchOptions: launchOptions
     )
 

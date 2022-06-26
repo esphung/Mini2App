@@ -12,6 +12,7 @@
 		0F0A09D32867CDBA00524CF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A09D22867CDBA00524CF1 /* AppDelegate.swift */; };
 		0F0A0A5D2867E37600524CF1 /* SwiftComponentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A0A5C2867E37600524CF1 /* SwiftComponentManager.m */; };
 		0F0A0A5F2867E38E00524CF1 /* SwiftComponentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A0A5E2867E38E00524CF1 /* SwiftComponentManager.swift */; };
+		0F0A0A612867E79700524CF1 /* MyModuleExport.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0A0A602867E79700524CF1 /* MyModuleExport.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		7699B88040F8A987B510C191 /* libPods-Mini2App-Mini2AppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Mini2App-Mini2AppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -35,6 +36,8 @@
 		0F0A09D22867CDBA00524CF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Mini2App/AppDelegate.swift; sourceTree = "<group>"; };
 		0F0A0A5C2867E37600524CF1 /* SwiftComponentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SwiftComponentManager.m; path = Mini2App/SwiftComponentManager.m; sourceTree = "<group>"; };
 		0F0A0A5E2867E38E00524CF1 /* SwiftComponentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftComponentManager.swift; path = Mini2App/SwiftComponentManager.swift; sourceTree = "<group>"; };
+		0F0A0A602867E79700524CF1 /* MyModuleExport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MyModuleExport.m; path = Mini2App/MyModuleExport.m; sourceTree = "<group>"; };
+		0F0A0A642867E8E700524CF1 /* MyModuleExport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MyModuleExport.h; path = Mini2App/MyModuleExport.h; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Mini2App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mini2App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Mini2App/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Mini2App/Info.plist; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				0F0A09D12867CDB900524CF1 /* Mini2App-Bridging-Header.h */,
 				0F0A0A5C2867E37600524CF1 /* SwiftComponentManager.m */,
 				0F0A0A5E2867E38E00524CF1 /* SwiftComponentManager.swift */,
+				0F0A0A602867E79700524CF1 /* MyModuleExport.m */,
+				0F0A0A642867E8E700524CF1 /* MyModuleExport.h */,
 			);
 			name = Mini2App;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F0A09D32867CDBA00524CF1 /* AppDelegate.swift in Sources */,
+				0F0A0A612867E79700524CF1 /* MyModuleExport.m in Sources */,
 				0F0A0A5D2867E37600524CF1 /* SwiftComponentManager.m in Sources */,
 				0F0A0A5F2867E38E00524CF1 /* SwiftComponentManager.swift in Sources */,
 			);

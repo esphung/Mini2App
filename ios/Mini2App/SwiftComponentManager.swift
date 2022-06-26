@@ -31,8 +31,15 @@ class SwiftComponentManager: NSObject, DJISDKManagerDelegate {
     print(progress)
   }
   //  TODO: Move to VC
-  func registerApp() {
-      DJISDKManager.registerApp(with: self)
+  @objc func registerApp(_ title: String?, _ callback: RCTResponseSenderBlock) {
+    DJISDKManager.registerApp(with: self)
   }
+  
+
+//  func registerApp() -> String {
+//      DJISDKManager.registerApp(with: self)
+//
+//      return "Finished"
+//  }
 
 }
