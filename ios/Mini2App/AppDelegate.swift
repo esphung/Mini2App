@@ -8,28 +8,29 @@
 import Foundation
 import DJISDK
 
+//DJISDKManagerDelegate
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, DJISDKManagerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
   
-  //  TODO: Move to VC
-  func appRegisteredWithError(_ error: Error?) {
-      var message = "Register App Succeeded!"
-      if error != nil {
-          message = "DJISDK Register App Failed! Please enter your App Key in the plist file and check the network."
-          print(message)
-      } else {
-          print("DJISDK registerAppSuccess: \(message)")
-      }
-  }
-
-  //  TODO: Move to VC
-  func didUpdateDatabaseDownloadProgress(_ progress: Progress) {
-    print(progress)
-  }
-  //  TODO: Move to VC
-  func registerApp() {
-      DJISDKManager.registerApp(with: self)
-  }
+//  //  TODO: Move to VC
+//  func appRegisteredWithError(_ error: Error?) {
+//      var message = "Register App Succeeded!"
+//      if error != nil {
+//          message = "DJISDK Register App Failed! Please enter your App Key in the plist file and check the network."
+//          print(message)
+//      } else {
+//          print("DJISDK registerAppSuccess: \(message)")
+//      }
+//  }
+//
+//  //  TODO: Move to VC
+//  func didUpdateDatabaseDownloadProgress(_ progress: Progress) {
+//    print(progress)
+//  }
+//  //  TODO: Move to VC
+//  func registerApp() {
+//      DJISDKManager.registerApp(with: self)
+//  }
 
   var window: UIWindow?
 
@@ -57,8 +58,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DJISDKManagerDelegate {
     self.window?.rootViewController = rootViewController
     self.window?.makeKeyAndVisible();
     
-    //  TODO: Move to VC
-    registerApp()
+    //  TODO: Call from React Native
+    // registerApp()
 
     return true
   }
