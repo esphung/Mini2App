@@ -9,10 +9,13 @@ import DJISDK
 import Foundation
 
 @objc(SwiftComponentManager)
-class SwiftComponentManager: NSObject, DJISDKManagerDelegate {
+class SwiftComponentManager: NSObject, DJISDKManagerDelegate, DJIAppActivationManagerDelegate {
   
   var registered: Bool = false;
   var message: String = "";
+  
+  var activationState: DJIAppActivationState!
+  var aircraftBindingState: DJIAppActivationAircraftBindingState!
 
   // Test function for RN call
   @objc func passValueFromReact(_ value : String) {
@@ -43,9 +46,18 @@ class SwiftComponentManager: NSObject, DJISDKManagerDelegate {
   @objc func registerApp(_ callback: RCTResponseSenderBlock) -> Void {
       DJISDKManager.registerApp(with: self)
 
+      DJISDKManager.startConnectionToProduct()
+
+      DJISDKManager.appActivationManager().delegate = self;
+      self.activationState = DJISDKManager.appActivationManager().appActivationState;
+      self.aircraftBindingState = DJISDKManager.appActivationManager().aircraftBindingState;
+    
       var responseDict = Dictionary<String, Any>()
-      responseDict["success"] = registered
-      responseDict["message"] = message // registered == true ? "App registered" : "App failed to register"
+      responseDict["success"] = self.registered
+      responseDict["message"] = self.message
+  
+      responseDict["activationState"] = self.activationState
+      responseDict["aircraftBindingState"] = self.aircraftBindingState
 
       callback([NSNull(), responseDict])
   }

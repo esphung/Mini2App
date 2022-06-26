@@ -9,6 +9,9 @@ const App = (props) => {
 
 	const [isRegistered, setIsRegistered] = useState(false);
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const [airCraftBindingState, setAirCraftBindingState] = useState(null);
+
+	console.log('airCraftBindingState: ', airCraftBindingState);
 
 	const pressMe = () => {
 		SwiftComponentManager.passValueFromReact('Hello World')
@@ -22,6 +25,8 @@ const App = (props) => {
 			} else {
 				console.log('response: ', response);
 				setIsRegistered(response.success);
+
+				setAirCraftBindingState(response.aircraftBindingState)
 			}
 		});
 
